@@ -1,3 +1,4 @@
+pipeline {
 node ('master') {
    checkout scm
    stage('Build') {
@@ -14,4 +15,5 @@ node ('master') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
    }
+}
 }
