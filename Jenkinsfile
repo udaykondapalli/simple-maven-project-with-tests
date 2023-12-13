@@ -1,4 +1,4 @@
-node ('any') {
+node ('Built-In Node') {
 tools {
        // install the maven version configured as "M3" and add it to the path maven 'M3'
        maven "M3"
