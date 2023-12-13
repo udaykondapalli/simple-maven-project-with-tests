@@ -3,11 +3,12 @@ tools {
        // install the maven version configured as "M3" and add it to the path maven 'M3'
        maven "M3"
    }
-   checkout scm
+   
    stages {
 
            stage('Build') {
                steps {
+                  checkout scm
 
                   // run maven on a unix agent
                   sh "mvn -Dmaven.test.failure.ignore=true clean package"
